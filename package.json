@@ -1,0 +1,18 @@
+{
+  "name": "m-modules",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "merlin.ho",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint": "^5.0.1",
+    "eslint-rules": "git+ssh://git@github.kakaocorp.com:FTDev/eslint-rules.git",
+    "lerna": "^2.9.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
+  }
+}
