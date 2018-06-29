@@ -4,7 +4,11 @@ const getCurrentScrollTop = elem => {
     return elem.pageYOffset;
   }
 
-  return new TypeError("element type Error, element instanceof Window");
+  throw new TypeError(getCurrentScrollTop.errorMessage.typeError);
 };
 
 export default getCurrentScrollTop;
+
+getCurrentScrollTop.errorMessage = {
+  typeError: "element type Error, element instanceof Window"
+};

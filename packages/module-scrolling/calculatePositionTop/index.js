@@ -4,7 +4,11 @@ const calculatePositionTop = elem => {
     return elem.offsetTop;
   }
 
-  return new TypeError("element type Error, element instanceof HTMLElement");
+  throw new TypeError(calculatePositionTop.errorMessage.typeError);
 };
 
 export default calculatePositionTop;
+
+calculatePositionTop.errorMessage = {
+  typeError: "element type Error, element instanceof HTMLElement"
+};

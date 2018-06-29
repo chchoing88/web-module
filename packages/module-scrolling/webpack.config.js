@@ -13,17 +13,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.js/,
         loader: "babel-loader",
-        options: {
-          babelrc: path.join(process.cwd(), "../../.babelrc")
-        }
+        exclude : /node_modules/
       }
     ]
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
+    host: "172.28.31.38",
+    disableHostCheck: true,
     port: 9000,
     hot: true
   },

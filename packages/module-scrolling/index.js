@@ -1,21 +1,17 @@
-import getCurrentScrollTop from "./getCurrentScrollTop";
-import moveScroll from "./moveScroll";
-const dom = document.querySelector(".section_guide");
+import AutoScroll from "./autoScroll";
+// const dom = document.querySelector(".section_guide");
 
-// 스크롤 움직임
-const currentScrollTopValue = getCurrentScrollTop(window);
+// new ScrollAction({
+//   section:['','','']
+// })
 
-moveScroll({
-  easing: "easeInExpo",
-  currentScrollTopValue,
-  targetScrollTopValue: 1000,
-  duration: 1000
-});
+const M = M || {};
+M.AutoScroll = AutoScroll;
+window.M = M;
+//let a = new AutoScroll({});
+//a.moveToNearSection();
 
-//aa("easeInExpo", 1000, 1000);
+// 사용자들은 어떻게 써야 하는가...
 
-// setTimeout(function() {
-//   window.scrollTo({
-//     top: 1000
-//   });
-// }, 1000);
+// default
+// new autoScroll({});

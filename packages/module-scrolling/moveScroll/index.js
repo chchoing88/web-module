@@ -33,10 +33,13 @@ const moveScroll = calculateScrollPosition => ({ ...args }) => {
     time += INTERVAL_TIME;
     let scrollPosition = calculateScrollPositionByTime(time);
 
-    console.log(scrollPosition.topValue);
-    window.scrollTo({
-      top: scrollPosition.topValue
-    });
+    //console.log(scrollPosition.topValue);
+
+    // window.scrollTo({
+    //   top: scrollPosition.topValue
+    // });
+
+    window.scrollTo(0, scrollPosition.topValue);
 
     if (scrollPosition.status === SCROLL_STATE.END) {
       clearInterval(intervalId);

@@ -1,4 +1,14 @@
 {
-  "presets": ["env"],
-  "plugins": []
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "safari >= 7"]
+        },
+        "debug": true
+      }
+    ]
+  ],
+  "plugins": ["transform-object-rest-spread"]
 }
