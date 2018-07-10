@@ -4,6 +4,18 @@
 - packages 안의 각각의 폴더를 하나의 모듈로 본다.
 - 필요시엔 서로 폴더끼리의 dependence 를 걸 수 있다.
 
+# 사용법
+
+- yarn 은 최신버젼으로 setting 해 주세요~ 현재 시점 버젼은 v1.7.0
+- lerna 버젼도 최신으로 setting 현재 시점은 v2.9.0
+- yarn bootstrap 명령어로 packages 안에 있는 여러 모듈들에 대한 yarn install 진행
+
+```sh
+$ yarn bootstrap
+```
+
+- 해당 모듈로 폴더를 옮겨서 해당 모듈 md 를 참조한다.
+
 # 프로젝트 구성
 
 ## monorepo
