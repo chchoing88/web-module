@@ -1,6 +1,7 @@
 var path = require("path");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var webpack = require("webpack");
+var interFace = require("../../setting/interface");
 
 module.exports = {
   entry: {
@@ -15,14 +16,15 @@ module.exports = {
       {
         test: /\.js/,
         loader: "babel-loader",
-        exclude : /node_modules/
+        exclude: /node_modules/
       }
     ]
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    host: "172.28.31.38",
+    //host: "172.28.31.38",
+    host: interFace.ipAddress,
     disableHostCheck: true,
     port: 9000,
     hot: true
@@ -31,7 +33,8 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       title: "scrolling",
-      template: "index.html"
+      template: "index.html",
+      inject: "head"
     })
   ],
   stats: {

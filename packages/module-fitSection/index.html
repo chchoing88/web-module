@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>scrolling App</title>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
   <link rel="stylesheet" href="http://html.gt.dev.daum.net/mobile-2018/project/kakaopay_180625/css/common.css">
 </head>
 
@@ -16,7 +17,7 @@
         <h2 class="ir_pm tit_visual">카카오페이 오프라인 결제</h2>
       </div>
     </div>
-    <div class="section section_guide">
+    <div id="section1" class="section section_guide">
       <h3 class="tit_guide">카카오페이로 오프라인 결제하는 두 가지 방법을 소개합니다!</h3>
       <p class="desc_guide">이제 카톡에서 편하게 카카오페이로 결제하세요.</p>
       <ul class="list_guide">
@@ -35,7 +36,7 @@
         <span class="ico_offline ico_play">재생하기</span>브랜드영상</a>
     </div>
     <div id="sectionVisit" class="anchor"></div>
-    <div class="section section_visit">
+    <div id="section2" class="section section_visit">
       <h3 class="tit_section">찾아가는 카카오페이</h3>
       <div class="visit_plan">
         <strong class="tit_plan">찾아가는 카카오페이
@@ -188,7 +189,7 @@
       </div>
     </div>
     <div id="sectionEmot" class="anchor"></div>
-    <div class="section section_emot">
+    <div id="section3" class="section section_emot">
       <h3 class="tit_section">프렌즈 이모티콘</h3>
       <strong class="tit_emot">요즘 현금 결제하면
         <br>요즘 이모티콘 톡!</strong>
@@ -235,7 +236,11 @@
       </div>
     </div>
   </div>
-
+  <script>
+    new M.FitSection({
+      section: ["kakaoContent", "section1", "section2", "section3"]
+    });
+  </script>
 </body>
 
 </html>

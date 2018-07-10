@@ -5,6 +5,9 @@
   "author": "merlin.ho",
   "license": "MIT",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {},
   "devDependencies": {
     "babel": "^6.23.0",
@@ -15,5 +18,9 @@
     "eslint": "^5.0.1",
     "eslint-rules": "git+ssh://git@github.kakaocorp.com:FTDev/eslint-rules.git",
     "lerna": "^2.9.0"
+  },
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "publish": "lerna publish --skip-npm && git pull origin master && git push origin master"
   }
 }

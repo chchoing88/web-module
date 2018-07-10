@@ -1,11 +1,10 @@
 {
-  "name": "@m-modules/module-scrolling",
+  "name": "@m-modules/module-fitSection",
   "version": "0.0.1",
   "description": "fullpage scrolling module",
   "main": "index.js",
   "author": "merlin.ho",
   "license": "MIT",
-  "private": true,
   "dependencies": {},
   "scripts": {
     "start:dev": "webpack-dev-server"
