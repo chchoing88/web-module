@@ -3,6 +3,7 @@ import moveScroll from "../moveScroll";
 import judgeNearValue from "../judgeNearValue";
 import calculatePositionTop from "../calculatePositionTop";
 import debounce from "../util/debounce";
+import EventManager from "./EventManager";
 
 const defaultOptions = {
   easing: "easeInExpo",
@@ -19,6 +20,8 @@ export default class FitSection {
     this._delay = args.delay || defaultOptions.delay;
     this._sectionHeight = [];
     this._moveScrollId = [];
+
+    this._eventManager = new EventManager(window);
 
     this._setSectionHeight();
     this.moveToNearSection();
@@ -75,20 +78,14 @@ export default class FitSection {
   }
 
   _bindEvent() {
-    window.addEventListener("scroll", this._scrollHandler(), false);
-    window.addEventListener("mousewheel", this.moveStop.bind(this), false);
-    window.addEventListener("touchmove", this.moveStop.bind(this), false);
+    this._eventManager.on("scroll", this._scrollHandler());
+    this._eventManager.on("mousewheel", this.moveStop.bind(this));
+    this._eventManager.on("touchmove", this.moveStop.bind(this));
 
-    // resize 시
-    window.addEventListener("resize", this._resizeHandler.bind(this), false);
+    this._eventManager.on("resize", this._resizeHandler.bind(this));
   }
 
   _unbindEvent() {
-    window.removeEventListener("scroll", this._scrollHandler(), false);
-    window.removeEventListener("mousewheel", this.moveStop.bind(this), false);
-    window.removeEventListener("touchmove", this.moveStop.bind(this), false);
-
-    // resize 시
-    window.removeEventListener("resize", this._resizeHandler(), false);
+    this._eventManager.offAll();
   }
 }
