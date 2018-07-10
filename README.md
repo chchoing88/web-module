@@ -89,7 +89,7 @@ $ lerna publish --skip-npm
 ```
 
 - 자세한건 lerna 공식 홈페이지 참조.
-  (https://lernajs.io/)[https://lernajs.io/]
+  [https://lernajs.io/](https://lernajs.io/)
 
 ## 사용법
 
