@@ -25,7 +25,7 @@ const EASING = {
 
 const SCROLL_STATE = {
   END: -1,
-  COUNTINU: 0
+  CONTINUE: 0
 };
 
 export { EASING, SCROLL_STATE };

@@ -14,7 +14,7 @@ const calculateScrollPosition = ({
     topValue: Math.floor(
       EASING[easing](time, currentScrollTopValue, changeInValue, duration)
     ),
-    status: SCROLL_STATE.COUNTINU
+    status: SCROLL_STATE.CONTINUE
   };
 
   return result.topValue === targetScrollTopValue
