@@ -1,7 +1,6 @@
 var path = require("path");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var webpack = require("webpack");
-var interFace = require("../../setting/interface");
 
 module.exports = {
   entry: {
@@ -23,8 +22,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    //host: "172.28.31.38",
-    host: interFace.ipAddress,
+    host: "0.0.0.0",
     disableHostCheck: true,
     port: 9000,
     hot: true
