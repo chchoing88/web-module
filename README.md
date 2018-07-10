@@ -9,6 +9,11 @@
 
 - Requires node `6.14.0 || ^8.10.0 || >=9.10.0`
 - Requires `yarn >=0.27`
+- Requires `lerna global install`
+
+```sh
+$ yarn global add lerna
+```
 
 - yarn post-install 명령어로 packages 안에 있는 여러 모듈들에 대한 yarn install 진행
 
