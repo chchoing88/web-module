@@ -1,5 +1,5 @@
 {
-  "name": "@m-modules/module-fitSection",
+  "name": "module-fitSection",
   "version": "0.0.1",
   "description": "fullpage scrolling module",
   "main": "index.js",
@@ -8,12 +8,5 @@
   "dependencies": {},
   "scripts": {
     "start:dev": "webpack-dev-server"
-  },
-  "devDependencies": {
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.12.2",
-    "webpack-dev-server": "^3.1.4",
-    "babel-loader": "^7.1.4",
-    "webpack-cli": "^3.0.8"
   }
 }

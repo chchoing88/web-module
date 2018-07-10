@@ -1,6 +1,5 @@
 {
   "name": "m-modules",
-  "version": "0.0.1",
   "main": "index.js",
   "author": "merlin.ho",
   "license": "MIT",
@@ -14,13 +13,18 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.5",
     "babel-preset-env": "^1.7.0",
+    "babel-loader": "^7.1.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "eslint": "^5.0.1",
     "eslint-rules": "git+ssh://git@github.kakaocorp.com:FTDev/eslint-rules.git",
-    "lerna": "^2.9.0"
+    "lerna": "^2.9.0",
+    "webpack": "^4.12.2",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-cli": "^3.0.8",
+    "html-webpack-plugin": "^3.2.0"
   },
   "scripts": {
-    "postinstall": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap",
     "publish": "lerna publish --skip-npm && git pull origin master && git push origin master"
   }
 }

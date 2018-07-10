@@ -15,7 +15,7 @@ const pow = Math.pow,
   c5 = (2 * PI) / 4.5;
 
 const EASING = {
-  easeInExpo: function easeInExpo(t, b, c, d) {
+  easeInExpo: function(t, b, c, d) {
     return t === 0 ? b : c * pow(2, 10 * (t / d - 1)) + b;
   },
   easeOutSine: function(x, t, b, c, d) {
