@@ -18,7 +18,7 @@ const EASING = {
   easeInExpo: function(t, b, c, d) {
     return t === 0 ? b : c * pow(2, 10 * (t / d - 1)) + b;
   },
-  easeOutSine: function(x, t, b, c, d) {
+  easeOutSine: function(t, b, c, d) {
     return c * sin((t / d) * (PI / 2)) + b;
   }
 };

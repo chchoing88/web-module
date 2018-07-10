@@ -57,7 +57,7 @@ export default class FitSection {
       return 0;
     });
 
-    console.log(this._sectionHeight);
+    //console.log(this._sectionHeight);
   }
 
   _scrollHandler() {
