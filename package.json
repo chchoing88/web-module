@@ -1,7 +1,7 @@
 {
   "name": "dk-modules",
   "main": "index.js",
-  "author": "merlin.ho",
+  "author": "dkt",
   "license": "MIT",
   "private": true,
   "workspaces": [

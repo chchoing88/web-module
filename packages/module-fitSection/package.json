@@ -7,6 +7,6 @@
   "license": "MIT",
   "dependencies": {},
   "scripts": {
-    "start:dev": "webpack-dev-server"
+    "start:dev": "webpack-dev-server --open"
   }
 }
