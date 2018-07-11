@@ -18,11 +18,13 @@ export default class FitSection {
     this._duration = args.duration || defaultOptions.duration;
     this._section = args.section || defaultOptions.section;
     this._delay = args.delay || defaultOptions.delay;
+    this._sectionDom = [];
     this._sectionHeight = [];
     this._moveScrollId = [];
 
     this._eventManager = new EventManager(window);
 
+    this._setSectionDom();
     this._setSectionHeight();
     this.moveToNearSection();
     this._bindEvent();
@@ -50,17 +52,23 @@ export default class FitSection {
     }
   }
 
-  _setSectionHeight() {
-    this._sectionHeight = this._section.map(selector => {
+  _setSectionDom() {
+    this._sectionDom = this._section.map(selector => {
       let sectionElement = document.getElementById(selector);
       if (sectionElement instanceof HTMLElement) {
-        return calculatePositionTop(sectionElement);
+        return sectionElement;
+      }
+    });
+  }
+
+  _setSectionHeight() {
+    this._sectionHeight = this._sectionDom.map(elem => {
+      if (elem instanceof HTMLElement) {
+        return calculatePositionTop(elem);
       }
 
       return 0;
     });
-
-    //console.log(this._sectionHeight);
   }
 
   _scrollHandler() {
@@ -71,9 +79,13 @@ export default class FitSection {
   _resizeHandler() {
     const self = this;
     const RESIZE_DEBOUNCE_TIME = 250;
+
     return debounce(() => {
-      self._setSectionHeight().bind(self);
-      self.moveToNearSection().bind(self);
+      self._eventManager.off("scroll", self._scrollHandler());
+      self._setSectionHeight.call(self);
+      self.moveToNearSection.call(self);
+
+      self._eventManager.on("scroll", self._scrollHandler());
     }, RESIZE_DEBOUNCE_TIME);
   }
 
@@ -82,7 +94,7 @@ export default class FitSection {
     this._eventManager.on("mousewheel", this.moveStop.bind(this));
     this._eventManager.on("touchmove", this.moveStop.bind(this));
 
-    this._eventManager.on("resize", this._resizeHandler.bind(this));
+    this._eventManager.on("resize", this._resizeHandler());
   }
 
   _unbindEvent() {

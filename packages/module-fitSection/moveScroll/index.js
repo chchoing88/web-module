@@ -10,13 +10,13 @@ const calculateScrollPosition = ({
   duration
 }) => time => {
   const changeInValue = targetScrollTopValue - currentScrollTopValue;
+
   let result = {
     topValue: Math.floor(
-      EASING[easing](time, currentScrollTopValue, changeInValue, duration)
+      EASING[easing](0, time, currentScrollTopValue, changeInValue, duration)
     ),
     status: SCROLL_STATE.CONTINUE
   };
-
   return result.topValue === targetScrollTopValue
     ? {
       ...result,
@@ -25,7 +25,7 @@ const calculateScrollPosition = ({
     : result;
 };
 
-const moveScroll = calculateScrollPosition => ({ ...args }) => {
+const moveScroll = ({ ...args }) => {
   let time = 0;
   let calculateScrollPositionByTime = calculateScrollPosition({ ...args });
 
@@ -43,4 +43,4 @@ const moveScroll = calculateScrollPosition => ({ ...args }) => {
   return intervalId;
 };
 
-export default moveScroll(calculateScrollPosition);
+export default moveScroll;

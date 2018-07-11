@@ -55,16 +55,15 @@ new M.FitSection({
 | name     | type   | required | default    | description                                     |
 | -------- | ------ | -------- | ---------- | ----------------------------------------------- |
 | section  | Array  | ✔        | []         | 각 섹션별 id 문자열을 지닌 배열                 |
-| easing   | string |          | easeInExpo | easing 문자열 값                                |
+| easing   | string |          | easeInExpo | easing 문자열 값 (종류 아래 참조)               |
 | duration | number |          | 1000 (ms)  | 스크롤이 이뤄질때 몇초동안 이뤄질지에 대한 시간 |
 | delay    | number |          | 500 (ms)   | 몇초 뒤에 스크롤이 이뤄질지에 대한 시간         |
 
 ## easing 종류
 
-- easeInExpo
-- easeOutSine
+[https://github.com/danro/jquery-easing/blob/master/jquery.easing.js](https://github.com/danro/jquery-easing/blob/master/jquery.easing.js) 이곳 참고
 
-* 추가 가능.
+`참고:` swing 은 제외시킴.
 
 ## browser support
 
