@@ -11,7 +11,7 @@ const calculateScrollPosition = ({
 }) => time => {
   const changeInValue = targetScrollTopValue - currentScrollTopValue;
 
-  let result = {
+  const result = {
     topValue: Math.floor(
       EASING[easing](0, time, currentScrollTopValue, changeInValue, duration)
     ),
@@ -27,11 +27,11 @@ const calculateScrollPosition = ({
 
 const moveScroll = ({ ...args }) => {
   let time = 0;
-  let calculateScrollPositionByTime = calculateScrollPosition({ ...args });
+  const calculateScrollPositionByTime = calculateScrollPosition({ ...args });
 
   const intervalId = setInterval(function() {
     time += INTERVAL_TIME;
-    let scrollPosition = calculateScrollPositionByTime(time);
+    const scrollPosition = calculateScrollPositionByTime(time);
 
     window.scrollTo(0, scrollPosition.topValue);
 

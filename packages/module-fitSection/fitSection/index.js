@@ -37,7 +37,7 @@ export default class FitSection {
       currentScrollTopValue
     });
 
-    let moveScrollId = moveScroll({
+    const moveScrollId = moveScroll({
       easing: this._easing,
       currentScrollTopValue,
       targetScrollTopValue,
@@ -54,7 +54,7 @@ export default class FitSection {
 
   _setSectionDom() {
     this._sectionDom = this._section.map(selector => {
-      let sectionElement = document.getElementById(selector);
+      const sectionElement = document.getElementById(selector);
       if (sectionElement instanceof HTMLElement) {
         return sectionElement;
       }
@@ -72,20 +72,18 @@ export default class FitSection {
   }
 
   _scrollHandler() {
-    const self = this;
-    return debounce(() => self.moveToNearSection(), self._delay);
+    return debounce(() => this.moveToNearSection(), this._delay);
   }
 
   _resizeHandler() {
-    const self = this;
     const RESIZE_DEBOUNCE_TIME = 250;
 
     return debounce(() => {
-      self._eventManager.off("scroll", self._scrollHandler());
-      self._setSectionHeight.call(self);
-      self.moveToNearSection.call(self);
+      this._eventManager.off("scroll", this._scrollHandler());
+      this._setSectionHeight();
+      this.moveToNearSection();
 
-      self._eventManager.on("scroll", self._scrollHandler());
+      this._eventManager.on("scroll", this._scrollHandler());
     }, RESIZE_DEBOUNCE_TIME);
   }
 

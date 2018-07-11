@@ -6,7 +6,7 @@ import FitSection from "./fitSection";
 //   section:['','','']
 // })
 
-const M = M || {};
+const M = window.M || {};
 M.FitSection = FitSection;
 window.M = M;
 //let a = new AutoScroll({});
