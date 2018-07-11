@@ -2,244 +2,432 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>scrolling App</title>
+  <meta charset="utf-8">
+  <title>Kakao Melon</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="카카오멜론">
+  <meta property="og:description" content="카톡에서 음악 보내고 들으면, 블링블링 3D 라이언 이모티콘 선물!">
+  <meta property="og:image" content="https://t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/meta.png">
+  <meta property="og:url" content="https://www.kakaomelon.co.kr">
+  <meta property="fb:app_id" content="396441394152039">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/meta.png">
+  <link rel="icon" href="/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" href="/favicon_24x24.png" sizes="24x24">
+  <link rel="icon" href="/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" href="/favicon_48x48.png" sizes="48x48">
+  <link rel="icon" href="/favicon_64x64.png" sizes="64x64">
   <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
-  <link rel="stylesheet" href="http://html.gt.dev.daum.net/mobile-2018/project/kakaopay_180625/css/common.css">
+  <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+  <script type="text/javascript">
+    kakaoPixel('7175905380989157398').pageView();
+
+    (function (d) {
+      var se = d.createElement('script'); se.type = 'text/javascript'; se.async = true;
+      se.src = location.protocol + '//t1.daumcdn.net/tiara/js/td.min.js';
+      var s = d.getElementsByTagName('head')[0]; s.appendChild(se);
+    })(document);
+    var _tiq = 'undefined' !== typeof _tiq ? _tiq : [];
+    _tiq.push(['__setConfig', { enableForceSendPV: true }]);
+  </script>
+  <script src="//bc.ad.daum.net/bc?d=%7B%22track_id%22%3A%227175905380989157398%22%2C%22site%22%3A%7B%22identifier%22%3A%22www.kakaomelon.co.kr%22%2C%22url%22%3A%22https%3A%2F%2Fwww.kakaomelon.co.kr%2F%22%7D%2C%22sdk%22%3A%7B%22type%22%3A%22WEB%22%2C%22version%22%3A%220.3.2%22%7D%2C%22device%22%3A%7B%22dnt%22%3A%22N%22%7D%2C%22event_code%22%3A%22PageView%22%2C%22params%22%3A%7B%7D%7D&amp;c=c_json1"
+    async=""></script>
+  <script type="text/javascript" async="" src="https://t1.daumcdn.net/tiara/js/td.min.js"></script>
+  <link href="https://www.kakaomelon.co.kr/css/app.css" rel="stylesheet">
 </head>
 
 <body>
-
-  <div id="kakaoContent" class="cont_offline" role="main">
-    <div class="section section_intro">
-      <div class="intro_visual">
-        <p class="ir_pm desc_visual">현금·카드·지갑 걱정없이 요금현금</p>
-        <h2 class="ir_pm tit_visual">카카오페이 오프라인 결제</h2>
-      </div>
-    </div>
-    <div id="section1" class="section section_guide">
-      <h3 class="tit_guide">카카오페이로 오프라인 결제하는 두 가지 방법을 소개합니다!</h3>
-      <p class="desc_guide">이제 카톡에서 편하게 카카오페이로 결제하세요.</p>
-      <ul class="list_guide">
-        <li>
-          <a href="#none" class="link_guide">
-            <span class="txt_qr">QR</span>결제 하는 법</a>
-        </li>
-        <li>
-          <a href="#none" class="link_guide">매장결제 하는 법</a>
-        </li>
-      </ul>
-    </div>
-    <div class="section section_brand">
-      <h3 class="screen_out">브랜드영상</h3>
-      <a href="/mobile-2018/project/kakaopay_180625/offline.html?brand" class="btn_play">
-        <span class="ico_offline ico_play">재생하기</span>브랜드영상</a>
-    </div>
-    <div id="sectionVisit" class="anchor"></div>
-    <div id="section2" class="section section_visit">
-      <h3 class="tit_section">찾아가는 카카오페이</h3>
-      <div class="visit_plan">
-        <strong class="tit_plan">찾아가는 카카오페이
-          <span class="txt_qr">QR</span>결제</strong>
-        <p class="desc_plan">'요즘 현금' 쉽게 알려주고 편하게 쓸 수 있게,
-          <br>7월 한 달간 전국 사장님들을 저희가 직접 찾아갑니다.</p>
-        <a href="#none" class="link_visit">찾아가는 일정
-          <span class="ico_offline ico_arr"></span>
+  <div id="root">
+    <div id="kakaoPromotion" class="promotion_melon">
+      <div id="kakaoHead" class="">
+        <h1 class="tit_logo">
+          <a href="" class="ico_melon link_home">kakaomelon</a>
+        </h1>
+        <a class="link_svc">바로가기
+          <span class="ico_melon ico_arrow"></span>
         </a>
       </div>
-      <div class="visit_item visit_story">
-        <strong class="tit_visit">1. 사장님들의 이야기를 듣고</strong>
-        <p class="desc_visit">
-          <span class="txt_qr">QR</span>결제 직접 사용하신 사장님들의 이야기를 만나보세요.</p>
-        <div class="area_slide">
-          <div class="slide" style="width:300%;">
-            <div class="panel" style="width:33.333%;">
-              <!-- 모든 btn_play 클릭시 btn_play 클레스명 제거 후 btn_pause 추가 -->
-              <button type="button" class="btn_play">
-                <span class="ico_offline ico_play">재생하기</span>푸드트럭</button>
-              <video class="player_g" width="100%" height="100%" poster="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod1.jpg"
-                src="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/melon_video1.mp4"></video>
+      <div id="kakaoContent" class="support-sr">
+        <div id="section1" class="melon_cont melon_main scl-step" name="MainContainer" data-scrollama-index="0">
+          <h2 class="screen_out">서비스 메인</h2>
+          <div class="cont_g cont_main">
+            <div class="info_main">
+              <strong class="txt_main">카카오멜론</strong>
+              <div class="wrap_word">
+                <div class="inner_word" style="transform: translateY(-1600px);">
+                  <h3 class="tit_main">음악을 함께 듣다</h3>
+                  <h3 class="tit_main">음악을 공유하다</h3>
+                  <h3 class="tit_main">음악을 선물하다</h3>
+                  <h3 class="tit_main">음악을 표현하다</h3>
+                  <h3 class="tit_main">음악으로 소통하다</h3>
+                  <h3 class="tit_main">음악으로 교감하다</h3>
+                  <h3 class="tit_main">음악으로 연결하다</h3>
+                  <h3 class="tit_main">음악으로 공감하다</h3>
+                  <h3 class="tit_main">음악으로 놀이하다</h3>
+                  <h3 class="tit_main">음악으로 경험하다</h3>
+                  <h3 class="tit_main">음악으로 위로하다</h3>
+                  <h3 class="tit_main">음악으로 발견하다</h3>
+                  <h3 class="tit_main">음악으로 사과하다</h3>
+                  <h3 class="tit_main">음악으로 함께하다</h3>
+                  <h3 class="tit_main">음악으로 축하하다</h3>
+                  <h3 class="tit_main">음악으로 전달하다</h3>
+                  <h3 class="tit_main">음악으로 톡하는 중</h3>
+                </div>
+              </div>
+              <a href="" class="link_event">사용법 확인하기</a>
+              <a class="link_service">서비스 바로가기
+                <span class="ico_melon ico_arrow"></span>
+              </a>
             </div>
-            <div class="panel" style="width:33.333%;">
-              <button type="button" class="btn_play">
-                <span class="ico_offline ico_play">재생하기</span>푸드트럭</button>
-              <video class="player_g" width="100%" height="100%" poster="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod2.jpg"
-                src="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/melon_video2.mp4"></video>
+            <a href="" class="ico_melon link_scroll">컨텐츠 바로가기</a>
+          </div>
+        </div>
+        <div name="IntroContainer" class="melon_intro_wrap scl-step" data-scrollama-index="1">
+          <div class="melon_intro sticky">
+            <div id="section2" class="melon_cont melon_intro1">
+              <div class="cont_g cont_intro">
+                <div class="box_intro">
+                  <div class="box_cont">
+                    <div class="box_g" data-sr-id="1" style="visibility: visible;  -webkit-transform: translateY(0); opacity: 1;transform: translateY(0); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; transition: transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; ">
+                      <h3 class="tit_intro">음악으로 표현하다</h3>
+                      <p class="desc_intro">이모티콘 만으로는 다 전할 수 없는 감정,
+                        <br>음악으로 당신의 마음을 표현해보세요.</p>
+                    </div>
+                  </div>
+                  <div class="box_vod">
+                    <div class="inner_vod">
+                      <div class="vod_thumb" style="top: 0em;">
+                        <div class="chat_bubble_wrap" data-sr-id="5" style="visibility: visible;  -webkit-transform: translateY(0); opacity: 1;transform: translateY(0); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; transition: transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; ">
+                          <div class="chat_bubble chat_bubble_1_1" style="opacity: 1;">
+                            <div class="bubble bubble_1_1"></div>
+                          </div>
+                          <div class="chat_bubble chat_bubble_1_2" style="opacity: 1;">
+                            <div class="bubble bubble_1_2"></div>
+                          </div>
+                          <div class="chat_bubble chat_bubble_1_3" style="opacity: 1;">
+                            <div class="bubble bubble_1_3"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="panel" style="width:33.333%;">
-              <button type="button" class="btn_play">
-                <span class="ico_offline ico_play">재생하기</span>푸드트럭</button>
-              <video class="player_g" width="100%" height="100%" poster="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod4.jpg"
-                src="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/melon_video4.mp4"></video>
+            <div id="section3" class="melon_cont melon_intro2">
+              <div class="cont_g cont_intro">
+                <div class="box_intro">
+                  <div class="box_cont">
+                    <div class="box_g" data-sr-id="2" style="visibility: visible;  -webkit-transform: translateY(0); opacity: 1;transform: translateY(0); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; transition: transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; ">
+                      <h3 class="tit_intro">음악을 함께 듣다</h3>
+                      <p class="desc_intro">카톡 대화창에서 친구와 이야기하며
+                        <br>음악을 바로 공유하고 함께 들어보세요.</p>
+                    </div>
+                  </div>
+                  <div class="box_vod">
+                    <div class="inner_vod">
+                      <div class="vod_thumb" style="top: 0em;">
+                        <div class="chat_bubble_wrap" data-sr-id="6" style="visibility: visible;  -webkit-transform: translateY(0); opacity: 1;transform: translateY(0); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; transition: transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; ">
+                          <div class="chat_bubble chat_bubble_2_1" style="opacity: 1;">
+                            <div class="bubble bubble_2_1"></div>
+                          </div>
+                          <div class="chat_bubble chat_bubble_2_2" style="opacity: 1;">
+                            <div class="bubble bubble_2_2"></div>
+                          </div>
+                          <div class="chat_bubble chat_bubble_2_3" style="opacity: 1;">
+                            <div class="bubble bubble_2_3"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="section4" class="melon_cont melon_intro3">
+              <div class="cont_g cont_intro">
+                <div class="box_intro">
+                  <div class="box_cont">
+                    <div class="box_g" data-sr-id="3" style="visibility: visible;  -webkit-transform: translateY(0); opacity: 1;transform: translateY(0); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; transition: transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; ">
+                      <h3 class="tit_intro">음악으로 공유하다</h3>
+                      <p class="desc_intro">나만의 취향이 담긴 음악으로
+                        <br class="mo_linefeed">프로필 뮤직을 설정하고
+                        <br class="pc_linefeed">친구 프로필의
+                        <br class="mo_linefeed">음악도 들으며 취향을 공유해보세요. </p>
+                    </div>
+                  </div>
+                  <div class="box_vod">
+                    <div class="intro_card" data-sr-id="7" style="visibility: visible;  -webkit-transform: translateY(0); opacity: 1;transform: translateY(0); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; transition: transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; ">
+                      <div class="inner_card">
+                        <img class="profile profile_1" src="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/retina/card_1.png"
+                          alt="" style="z-index: 3; right: 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <img class="profile profile_2" src="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/retina/card_2.png"
+                          alt="" style="z-index: 2; right: -20px; transform: matrix(0.86, 0, 0, 0.86, 0, 0);">
+                        <img class="profile profile_3" src="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/retina/card_3.png"
+                          alt="" style="z-index: 1; right: -40px; transform: matrix(0.74, 0, 0, 0.74, 0, 0);">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="section5" class="melon_cont melon_intro4">
+              <div class="cont_g cont_intro">
+                <div class="box_intro">
+                  <div class="box_cont">
+                    <div class="box_g" data-sr-id="4" style="visibility: visible;  -webkit-transform: translateY(0); opacity: 1;transform: translateY(0); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; transition: transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; ">
+                      <h3 class="tit_intro">음악으로 놀이하다</h3>
+                      <p class="desc_intro">카카오멜론 플친에서 뮤직봇 '로니'와 함께
+                        <br>좋아하는 가수, TV프로의 음악을 찾고,
+                        <br>내 취향과 기분에 맞춘 음악도 추천받아보세요.</p>
+                      <a href="http://melon.com/kakaomusicbottip" target="_blank" class="link_service">자세히 보러가기
+                        <span class="ico_melon ico_arrow"></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="box_chat">
+                    <div class="inner_chat" data-sr-id="8" style="visibility: visible;  -webkit-transform: translateY(0); opacity: 1;transform: translateY(0); opacity: 1;-webkit-transition: -webkit-transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; transition: transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s; ">
+                      <div class="bubble bubble_3_1" style="opacity: 1;"></div>
+                      <div class="bubble bubble_3_2" style="opacity: 1;"></div>
+                      <div class="bubble bubble_3_3" style="opacity: 1;"></div>
+                      <div class="bubble bubble_3_4" style="opacity: 1;"></div>
+                      <div class="bubble bubble_3_5" style="opacity: 1;"></div>
+                      <div class="bubble bubble_3_6" style="opacity: 1;"></div>
+                      <div class="bubble bubble_3_7" style="opacity: 1;"></div>
+                      <div class="bubble bubble_3_8" style="opacity: 1;"></div>
+                      <div class="bubble bubble_3_9" style="opacity: 1;"></div>
+                      <div class="bubble bubble_3_10" style="opacity: 1;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <ul class="list_story">
-          <li class="on">
-            <a href="#none" class="link_story">
-              <img src="/mobile-2018/project/kakaopay_180625/images/thumb_story01.png" class="img_offline" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="#none" class="link_story">
-              <img src="/mobile-2018/project/kakaopay_180625/images/thumb_story02.png" class="img_offline" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="#none" class="link_story">
-              <img src="/mobile-2018/project/kakaopay_180625/images/thumb_story03.png" class="img_offline" alt="">
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="visit_item visit_kit">
-        <strong class="tit_visit">2.
-          <span class="txt_qr">QR</span>결제 키트를 드립니다.</strong>
-        <p class="desc_visit">잔돈 준비 필요없고 수수료 걱정없는 사장님을 위한 키트입니다.</p>
-        <div class="area_slide">
-          <div class="slide" style="width:300%;">
-            <div class="panel" style="width:33.333%;">
-              <img src="/mobile-2018/project/kakaopay_180625/images/img_kit01.png" class="img_offline" alt="">
+        <div id="section6" class="melon_cont melon_vod scl-step" data-scrollama-index="2">
+          <h2 class="screen_out">서비스 영상</h2>
+          <div class="cont_g cont_vod">
+            <div class="wrap_tit">
+              <strong class="tit_vod">#연애하자 여친</strong>
+              <span class="txt_vod">사귀자는 말 대신 음악 한 곡</span>
             </div>
-            <div class="panel" style="width:33.333%;">
-              <img src="/mobile-2018/project/kakaopay_180625/images/img_kit01.png" class="img_offline" alt="">
+            <div class="wrap_slide">
+              <div class="vod_slide slick-initialized slick-slider">
+                <div class="slick-list">
+                  <div class="slick-track" style="opacity: 1; width: 8640px; transform: translate3d(-960px, 0px, 0px);">
+                    <div class="slide_pannel slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 960px;">
+                      <div class="box_vod">
+                        <div class="control_vod ">
+                          <button type="button" class="ico_melon btn_play">재생하기</button>
+                        </div>
+                        <video class="player_g" width="100%" height="100%" poster="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod5.jpg"></video>
+                      </div>
+                    </div>
+                    <div class="slide_pannel slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 960px;">
+                      <div class="box_vod">
+                        <div class="control_vod ">
+                          <button type="button" class="ico_melon btn_play">재생하기</button>
+                        </div>
+                        <video class="player_g" width="100%" height="100%" poster="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod1.jpg"></video>
+                      </div>
+                    </div>
+                    <div class="slide_pannel slick-slide" data-slick-index="1" aria-hidden="true" style="width: 960px;">
+                      <div class="box_vod">
+                        <div class="control_vod ">
+                          <button type="button" class="ico_melon btn_play">재생하기</button>
+                        </div>
+                        <video class="player_g" width="100%" height="100%" poster="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod2.jpg"></video>
+                      </div>
+                    </div>
+                    <div class="slide_pannel slick-slide" data-slick-index="2" aria-hidden="true" style="width: 960px;">
+                      <div class="box_vod">
+                        <div class="control_vod ">
+                          <button type="button" class="ico_melon btn_play">재생하기</button>
+                        </div>
+                        <video class="player_g" width="100%" height="100%" poster="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod4.jpg"></video>
+                      </div>
+                    </div>
+                    <div class="slide_pannel slick-slide" data-slick-index="3" aria-hidden="true" style="width: 960px;">
+                      <div class="box_vod">
+                        <div class="control_vod ">
+                          <button type="button" class="ico_melon btn_play">재생하기</button>
+                        </div>
+                        <video class="player_g" width="100%" height="100%" poster="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod5.jpg"></video>
+                      </div>
+                    </div>
+                    <div class="slide_pannel slick-slide slick-cloned" data-slick-index="4" aria-hidden="true" style="width: 960px;">
+                      <div class="box_vod">
+                        <div class="control_vod ">
+                          <button type="button" class="ico_melon btn_play">재생하기</button>
+                        </div>
+                        <video class="player_g" width="100%" height="100%" poster="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod1.jpg"></video>
+                      </div>
+                    </div>
+                    <div class="slide_pannel slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" style="width: 960px;">
+                      <div class="box_vod">
+                        <div class="control_vod ">
+                          <button type="button" class="ico_melon btn_play">재생하기</button>
+                        </div>
+                        <video class="player_g" width="100%" height="100%" poster="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod2.jpg"></video>
+                      </div>
+                    </div>
+                    <div class="slide_pannel slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" style="width: 960px;">
+                      <div class="box_vod">
+                        <div class="control_vod ">
+                          <button type="button" class="ico_melon btn_play">재생하기</button>
+                        </div>
+                        <video class="player_g" width="100%" height="100%" poster="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod4.jpg"></video>
+                      </div>
+                    </div>
+                    <div class="slide_pannel slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" style="width: 960px;">
+                      <div class="box_vod">
+                        <div class="control_vod ">
+                          <button type="button" class="ico_melon btn_play">재생하기</button>
+                        </div>
+                        <video class="player_g" width="100%" height="100%" poster="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod5.jpg"></video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="panel" style="width:33.333%;">
-              <img src="/mobile-2018/project/kakaopay_180625/images/img_kit01.png" class="img_offline" alt="">
+            <ul class="list_vod">
+              <li class="on">
+                <a class="link_thumb">
+                  <img src="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod1.jpg" class="thumb_vod" alt="">
+                </a>
+              </li>
+              <li class="">
+                <a class="link_thumb">
+                  <img src="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod2.jpg" class="thumb_vod" alt="">
+                </a>
+              </li>
+              <li class="">
+                <a class="link_thumb">
+                  <img src="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod4.jpg" class="thumb_vod" alt="">
+                </a>
+              </li>
+              <li class="">
+                <a class="link_thumb">
+                  <img src="//t1.daumcdn.net/contents_img/img-contents/event/promotion/180323_melon/vod5.jpg" class="thumb_vod" alt="">
+                </a>
+              </li>
+            </ul>
+            <div class="paging_comm">
+              <span class="inner_paging">
+                <span class="screen_out">현재페이지</span>
+                <em class="num_page">1</em>
+                <span class="num_page">2</span>
+                <span class="num_page">3</span>
+                <span class="num_page">4</span>
+              </span>
             </div>
           </div>
-          <button type="button" class="btn_slide btn_prev off">
-            <span class="ico_offline ico_prev">이전페이지</span>
-          </button>
-          <button type="button" class="btn_slide btn_next">
-            <span class="ico_offline ico_next">다음페이지</span>
-          </button>
-          <p class="desc_paging">
-            <strong class="screen_out">페이지번호</strong>
-            <em class="txt_paging">1</em>/3
-          </p>
         </div>
-        <a href="/mobile-2018/project/kakaopay_180625/offline.html?apply" class="link_kit">모바일 무료 신청</a>
-        <p class="desc_kit">
-          <span class="txt_qr">QR</span>결제 키트는 매주 월-일요일까지 신청 후, 제작/배송기간 2~3주 소요됩니다.</p>
-        <div class="share_kit">
-          <ul class="list_share">
-            <li class="item_mobile">
-              <a href="#none" class="link_share">
-                <span class="ico_offline ico_kakao">카카오톡 공유하기</span>
-              </a>
-            </li>
-            <li class="item_mobile">
-              <a href="#none" class="link_share">
-                <span class="ico_offline ico_ks">카카오스토리 공유하기</span>
-              </a>
-            </li>
-            <li>
-              <a href="#none" class="link_share">
-                <span class="ico_offline ico_fb">페이스북 공유하기</span>
-              </a>
-            </li>
-            <li>
-              <a href="#none" class="link_share">
-                <span class="ico_offline ico_url">URL 복사</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="visit_item visit_spot">
-        <strong class="tit_visit">3. 이제 카카오페이를 오프라인에서 만나보세요.</strong>
-        <p class="desc_visit">사장님도 손님도 '요즘 현금 카카오페이'
-          <br>카카오페이 오프라인 마켓 일정을 알려드립니다.</p>
-        <div class="area_slide">
-          <div class="slide" style="width:300%;">
-            <div class="panel" style="width:33.333%;">
-              <a href="#none" class="link_offline">
-                <img src="/mobile-2018/project/kakaopay_180625/images/img_spot01.png" class="img_offline" alt="">
-              </a>
+        <div id="section7" class="melon_cont melon_event scl-step" name="EventContainer" data-scrollama-index="3">
+          <h2 class="screen_out">이벤트 소개</h2>
+          <div class="cont_g cont_event cont_event_1">
+            <div class="event_intro">
+              <div class="inner_event">
+                <strong class="tit_intro">대화창에서 쉽게
+                  <br>
+                  <span class="txt_intro">음악으로 톡하는 방법!</span>
+                </strong>
+              </div>
             </div>
-            <div class="panel" style="width:33.333%;">
-              <a href="#none" class="link_offline">
-                <img src="/mobile-2018/project/kakaopay_180625/images/img_spot01.png" class="img_offline" alt="">
-              </a>
-            </div>
-            <div class="panel" style="width:33.333%;">
-              <a href="#none" class="link_offline">
-                <img src="/mobile-2018/project/kakaopay_180625/images/img_spot01.png" class="img_offline" alt="">
-              </a>
+            <div class="event_cut1">
+              <div class="inner_cut">
+                <div class="wrap_slide">
+                  <div class="event_slide slick-initialized slick-slider">
+                    <button type="button" class="btn_slide btn_prev slick-arrow" style="">
+                      <span class="ico_melon">이전</span>
+                    </button>
+                    <div class="slick-list">
+                      <div class="slick-track" style="opacity: 1; width: 3560px; transform: translate3d(-712px, 0px, 0px);">
+                        <div class="slide_pannel slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" style="width: 356px;">
+                          <div class="thumb_slide event_img3"></div>
+                          <strong class="tit_slide">대화창에서 음악 재생
+                            <br>버튼을 누르고</strong>
+                        </div>
+                        <div class="slide_pannel slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 356px;">
+                          <div class="thumb_slide event_img4"></div>
+                          <strong class="tit_slide">카톡에서 바로
+                            <br>음악듣기!</strong>
+                        </div>
+                        <div class="slide_pannel slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 356px;">
+                          <div class="thumb_slide event_img1"></div>
+                          <strong class="tit_slide">대화창 더보기에서
+                            <br>음악 버튼 누르고</strong>
+                        </div>
+                        <div class="slide_pannel slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 356px;">
+                          <div class="thumb_slide event_img2"></div>
+                          <strong class="tit_slide">리스트에서 원하는 곡을
+                            <br>선택해서 공유</strong>
+                        </div>
+                        <div class="slide_pannel slick-slide" data-slick-index="2" aria-hidden="true" style="width: 356px;">
+                          <div class="thumb_slide event_img3"></div>
+                          <strong class="tit_slide">대화창에서 음악 재생
+                            <br>버튼을 누르고</strong>
+                        </div>
+                        <div class="slide_pannel slick-slide" data-slick-index="3" aria-hidden="true" style="width: 356px;">
+                          <div class="thumb_slide event_img4"></div>
+                          <strong class="tit_slide">카톡에서 바로
+                            <br>음악듣기!</strong>
+                        </div>
+                        <div class="slide_pannel slick-slide slick-cloned" data-slick-index="4" aria-hidden="true" style="width: 356px;">
+                          <div class="thumb_slide event_img1"></div>
+                          <strong class="tit_slide">대화창 더보기에서
+                            <br>음악 버튼 누르고</strong>
+                        </div>
+                        <div class="slide_pannel slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" style="width: 356px;">
+                          <div class="thumb_slide event_img2"></div>
+                          <strong class="tit_slide">리스트에서 원하는 곡을
+                            <br>선택해서 공유</strong>
+                        </div>
+                        <div class="slide_pannel slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" style="width: 356px;">
+                          <div class="thumb_slide event_img3"></div>
+                          <strong class="tit_slide">대화창에서 음악 재생
+                            <br>버튼을 누르고</strong>
+                        </div>
+                        <div class="slide_pannel slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" style="width: 356px;">
+                          <div class="thumb_slide event_img4"></div>
+                          <strong class="tit_slide">카톡에서 바로
+                            <br>음악듣기!</strong>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn_slide btn_next slick-arrow" style="">
+                      <span class="ico_melon">다음</span>
+                    </button>
+                  </div>
+                  <div class="paging_comm">
+                    <span class="inner_paging">
+                      <span class="screen_out">현재페이지</span>
+                      <em class="num_page">1</em>
+                      <span class="num_page">2</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <button type="button" class="btn_slide btn_prev off">
-            <span class="ico_offline ico_prev">이전페이지</span>
-          </button>
-          <button type="button" class="btn_slide btn_next">
-            <span class="ico_offline ico_next">다음페이지</span>
-          </button>
-          <p class="desc_paging">
-            <strong class="screen_out">페이지번호</strong>
-            <em class="txt_paging">1</em>/3
-          </p>
+          <div id="kakaoFoot">
+            <small class="info_copyright">
+              <a href="http://www.kakaocorp.com" target="_blank" class="link_kakao">
+                <span class="ico_melon ico_kakao">@ Kakao Corp.</span>
+              </a>
+            </small>
+          </div>
         </div>
-        <p class="desc_spot">
-          <span class="txt_spot">문호리 리버마켓</span>
-          <a href="#none" class="link_visit">6/30 철원 DMZ
-            <span class="ico_offline ico_arr"></span>
-          </a>
-        </p>
-      </div>
-    </div>
-    <div id="sectionEmot" class="anchor"></div>
-    <div id="section3" class="section section_emot">
-      <h3 class="tit_section">프렌즈 이모티콘</h3>
-      <strong class="tit_emot">요즘 현금 결제하면
-        <br>요즘 이모티콘 톡!</strong>
-      <p class="desc_emot">7.5-8.4 카카오페이 오프라인(매장/
-        <span class="txt_qr">QR</span>)결제하시면
-        <br>선착순 100명 한정, 카카오 프렌즈 이모티콘 증정합니다.</p>
-      <img src="/mobile-2018/project/kakaopay_180625/images/img_emot.gif" class="img_offline" alt="카카오 프렌즈 이모티콘 예시">
-    </div>
-    <div class="section section_notice">
-      <h3 class="tit_notice">꼭 확인하세요!</h3>
-      <strong class="txt_notice">찾아가는 카카오페이</strong>
-      <ul class="list_notice">
-        <li>- 찾아가는 카카오페이는 매주 다양한 지역을 찾아가는 행사입니다. 행사일정은 내부 사정으로 임의 변경될 수 있으며, 현장 참여를 희망하시면 사전고지되는 상세일정표를 참고해주세요.</li>
-        <li>- 현장 진행은 카카오페이 대행사 "제일기획"&amp;"KPR"을 통해서 진행합니다.</li>
-      </ul>
-      <strong class="txt_notice">
-        <span class="txt_qr">QR</span>결제 키트</strong>
-      <ul class="list_notice">
-        <li>- 소상공인 대상 지급되는
-          <span class="txt_qr">QR</span>결제 서비스 사용KIT로, 1인 1회 참여 가능합니다.</li>
-        <li>- 카카오페이 미 가입자의 경우 신청전 반드시 서비스 가입이 필요하고, 신청자의 카카오페이 회원정보와 연동된
-          <span class="txt_qr">QR</span>이 발행되므로 반드시 상점주 본인의 핸드폰으로 신청해주세요.</li>
-        <li>-
-          <span class="txt_qr">QR</span>결제는 무료로 이용 가능하며, 키트 제작 비용과 배송비 역시 카카오페이가 부담합니다.</li>
-        <li>- 이용한도 및 서비스정책은 향후 변동될 수 있으며 변동 전 사전 고지가 선행될 예정입니다.</li>
-        <li>-
-          <span class="txt_qr">QR</span>결제를 통해 받은 돈은 카카오페이 계정과 연동된 계좌로 자유롭게 입출금 가능합니다.</li>
-        <li>- 기타 사용법 등 자세한 사항은 카카오페이 홈페이지 및 코드에 동봉될 안내 메뉴얼에서 확인하실 수 있습니다.</li>
-      </ul>
-      <strong class="txt_notice">이모티콘 이벤트</strong>
-      <ul class="list_notice">
-        <li>- 프렌즈 이모티콘은 기간내 카카오페이 오프라인 결제(매장결제 or
-          <span class="txt_qr">QR</span>결제) 1회 이상 사용시 지급됩니다.</li>
-        <li>- 기존 카카오페이 다른 서비스 이용시 이모티콘이 지급되지 않습니다.</li>
-        <li>- 선착순 한정수량으로 1인 1회 참여가능하며, 1회발급/지급된 이모티콘은 추가 재발송이 불가합니다.</li>
-        <li>- 프렌즈 이모티콘은 카카오페이 플친을 통해 지급되며, 지급된 프렌즈이모티콘 사용기간은 OO일 읿니다.</li>
-      </ul>
-      <p class="desc_notice">* 본 캠페인은 당사 사정에 의해 사전 고시 없이 변경 또는 조기 종료될 수 있습니다.</p>
-      <p class="desc_notice">* 추가문의:카카오페이 고객센터 전화번호 OOOO-OOOO</p>
-    </div>
-    <div class="k_foot" role="contentinfo">
-      <div class="inner_foot">
-        <small class="txt_copyright">@ Kakao Corp.</small>
       </div>
     </div>
   </div>
+
   <script>
     new M.FitSection({
-      section: ["kakaoContent", "section1", "section2", "section3"],
-      easing: "easeOutBounce"
+      section: ["section1", "section2", "section3", "section4", "section5", "section6", "section7"],
+      easing: "easeOutCubic",
+
     });
   </script>
 </body>
