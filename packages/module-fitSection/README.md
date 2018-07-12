@@ -19,6 +19,7 @@
 │   ├── constant.js             - 상수 및 easing 정의
 │   ├── index.js                - 해당 target 위치로 스크롤 이동
 ├── fitSection
+│   ├── EventManager.js         - 이벤트 모듈
 │   ├── index.js                - fitSection 모듈 클래스
 └── └── util                    - 유틸 관련 폴더
 ```
@@ -40,6 +41,8 @@ new M.FitSection({
 });
 ```
 
+`주의:` 각 section 별 id 문자열은 위에서부터 아래로 순서대로 적는다.
+
 ## fitSection Module Options
 
 ```javascript
@@ -48,16 +51,18 @@ new M.FitSection({
   section: ["kakaoContent", "section1", "section2", "section3"],
   easing: "easeInExpo",
   duration: 1000,
-  delay: 500
+  delay: 500,
+  threshold: 30
 });
 ```
 
-| name     | type   | required | default    | description                                     |
-| -------- | ------ | -------- | ---------- | ----------------------------------------------- |
-| section  | Array  | ✔        | []         | 각 섹션별 id 문자열을 지닌 배열                 |
-| easing   | string |          | easeInExpo | easing 문자열 값 (종류 아래 참조)               |
-| duration | number |          | 1000 (ms)  | 스크롤이 이뤄질때 몇초동안 이뤄질지에 대한 시간 |
-| delay    | number |          | 500 (ms)   | 몇초 뒤에 스크롤이 이뤄질지에 대한 시간         |
+| name      | type   | required | default    | description                                                              |
+| --------- | ------ | -------- | ---------- | ------------------------------------------------------------------------ |
+| section   | Array  | ✔        | []         | 각 섹션별 id 문자열을 지닌 배열                                          |
+| easing    | string |          | easeInExpo | easing 문자열 값 (종류 아래 참조)                                        |
+| duration  | number |          | 1000 (ms)  | 스크롤이 이뤄질때 몇초동안 이뤄질지에 대한 시간                          |
+| delay     | number |          | 500 (ms)   | 몇초 뒤에 스크롤이 이뤄질지에 대한 시간                                  |
+| threshold | number |          | 50 (%)     | 각 section 의 위 아래 %범위에 들어오면 해당 section 쪽으로 fit 하게 맞춤 |
 
 ## easing 종류
 

@@ -1,7 +1,14 @@
 import isArray from "../util/isArray";
 import isNumber from "../util/isNumber";
 
-const judgeNearValue = ({ target = [], currentScrollTopValue }) => {
+const NO_VALUE = -1;
+const HUNDRED = 100;
+
+const judgeNearValue = ({
+  target = [],
+  currentScrollTopValue,
+  threshold = 50
+}) => {
   let result = 0;
 
   if (!isArray(target)) {
@@ -12,15 +19,41 @@ const judgeNearValue = ({ target = [], currentScrollTopValue }) => {
     throw new TypeError(judgeNearValue.errorMessage.currentScrollTopError);
   }
 
-  result = target.reduce((nearValue, targetValue) => {
-    if (!isNumber(nearValue) || !isNumber(targetValue)) {
+  result = target.reduce((nearValue, currentValue, currentIndex) => {
+    if (!isNumber(nearValue) || !isNumber(currentValue)) {
       throw new TypeError(judgeNearValue.errorMessage.targetElementError);
     }
-    let diffNearValue = Math.abs(currentScrollTopValue - nearValue);
-    let diffTargetValue = Math.abs(currentScrollTopValue - targetValue);
 
-    return diffNearValue < diffTargetValue ? nearValue : targetValue;
-  });
+    if (target[currentIndex - 1] !== undefined) {
+      let diff = Math.abs(currentValue - target[currentIndex - 1]);
+      let thresholdValue = Math.round((diff * threshold) / HUNDRED);
+
+      if (
+        currentScrollTopValue >= currentValue - thresholdValue &&
+        currentScrollTopValue <= currentValue
+      ) {
+        return currentValue;
+      }
+    }
+
+    if (target[currentIndex + 1] !== undefined) {
+      let diff = Math.abs(target[currentIndex + 1] - currentValue);
+      let thresholdValue = Math.round((diff * threshold) / HUNDRED);
+
+      if (
+        currentScrollTopValue >= currentValue &&
+        currentScrollTopValue <= currentValue + thresholdValue
+      ) {
+        return currentValue;
+      }
+    }
+
+    return nearValue;
+  }, NO_VALUE);
+
+  if (result === NO_VALUE) {
+    result = currentScrollTopValue;
+  }
 
   return result;
 };
@@ -30,7 +63,7 @@ judgeNearValue.errorMessage = {
   currentScrollTopError:
     "judgeNearValue currentScrollTopError type error, number type need",
   targetElementError:
-    "target element type error, target element type number need"
+    "judgeNearValue target element type error, target element type number need"
 };
 
 export default judgeNearValue;

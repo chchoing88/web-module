@@ -9,7 +9,8 @@ const defaultOptions = {
   easing: "easeInExpo",
   duration: 1000,
   section: ["section1", "section2", "section3"],
-  delay: 500
+  delay: 500,
+  threshold: 50
 };
 
 export default class FitSection {
@@ -18,6 +19,7 @@ export default class FitSection {
     this._duration = args.duration || defaultOptions.duration;
     this._section = args.section || defaultOptions.section;
     this._delay = args.delay || defaultOptions.delay;
+    this._threshold = args.threshold || defaultOptions.threshold;
     this._sectionDom = [];
     this._sectionHeight = [];
     this._moveScrollId = [];
@@ -34,7 +36,8 @@ export default class FitSection {
     const currentScrollTopValue = getWindowScrollTop(window);
     const targetScrollTopValue = judgeNearValue({
       target: this._sectionHeight,
-      currentScrollTopValue
+      currentScrollTopValue,
+      threshold: this._threshold
     });
 
     const moveScrollId = moveScroll({
