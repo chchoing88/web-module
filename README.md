@@ -15,10 +15,10 @@
 $ yarn global add lerna
 ```
 
-- yarn post-install 명령어로 packages 안에 있는 여러 모듈들에 대한 yarn install 진행
+- yarn allinstall 명령어로 packages 안에 있는 여러 모듈들에 대한 yarn install 진행
 
 ```sh
-$ yarn post-install
+$ yarn allinstall
 # 각 packges 폴더 안에 있는 모듈들의 yarn install로 돌려준다.
 ```
 
