@@ -64,6 +64,8 @@ new M.FitSection({
 | delay     | number |          | 500 (ms)   | 몇초 뒤에 스크롤이 이뤄질지에 대한 시간                                  |
 | threshold | number |          | 50 (%)     | 각 section 의 위 아래 %범위에 들어오면 해당 section 쪽으로 fit 하게 맞춤 |
 
+`주의:` threshold 값의 범위는 0 ~ 50 으로 설정한다. 그 이상시 자동으로 50 으로 설정됨.
+
 ## easing 종류
 
 [https://github.com/danro/jquery-easing/blob/master/jquery.easing.js](https://github.com/danro/jquery-easing/blob/master/jquery.easing.js) 이곳 참고

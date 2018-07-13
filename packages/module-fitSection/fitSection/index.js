@@ -3,6 +3,7 @@ import moveScroll from "../moveScroll";
 import judgeNearValue from "../judgeNearValue";
 import calculatePositionTop from "../calculatePositionTop";
 import debounce from "../util/debounce";
+import assign from "../util/assign";
 import EventManager from "./EventManager";
 
 const defaultOptions = {
@@ -15,11 +16,8 @@ const defaultOptions = {
 
 export default class FitSection {
   constructor({ ...args }) {
-    this._easing = args.easing || defaultOptions.easing;
-    this._duration = args.duration || defaultOptions.duration;
-    this._section = args.section || defaultOptions.section;
-    this._delay = args.delay || defaultOptions.delay;
-    this._threshold = args.threshold || defaultOptions.threshold;
+    this._opts = assign({}, defaultOptions, args);
+
     this._sectionDom = [];
     this._sectionHeight = [];
     this._moveScrollId = [];
@@ -37,14 +35,14 @@ export default class FitSection {
     const targetScrollTopValue = judgeNearValue({
       target: this._sectionHeight,
       currentScrollTopValue,
-      threshold: this._threshold
+      threshold: this._opts.threshold
     });
 
     const moveScrollId = moveScroll({
-      easing: this._easing,
+      easing: this._opts.easing,
       currentScrollTopValue,
       targetScrollTopValue,
-      duration: this._duration
+      duration: this._opts.duration
     });
     this._moveScrollId.push(moveScrollId);
   }
@@ -56,7 +54,7 @@ export default class FitSection {
   }
 
   _setSectionDom() {
-    this._sectionDom = this._section.map(selector => {
+    this._sectionDom = this._opts.section.map(selector => {
       const sectionElement = document.getElementById(selector);
       if (sectionElement instanceof HTMLElement) {
         return sectionElement;
@@ -75,7 +73,7 @@ export default class FitSection {
   }
 
   _scrollHandler() {
-    return debounce(() => this.moveToNearSection(), this._delay);
+    return debounce(() => this.moveToNearSection(), this._opts.delay);
   }
 
   _resizeHandler() {

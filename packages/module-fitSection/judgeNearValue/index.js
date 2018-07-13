@@ -3,11 +3,12 @@ import isNumber from "../util/isNumber";
 
 const NO_VALUE = -1;
 const HUNDRED = 100;
+const MAX_THRESHOLD = 50;
 
 const judgeNearValue = ({
   target = [],
   currentScrollTopValue,
-  threshold = 50
+  threshold = MAX_THRESHOLD
 }) => {
   let result = 0;
 
@@ -17,6 +18,10 @@ const judgeNearValue = ({
 
   if (!isNumber(currentScrollTopValue)) {
     throw new TypeError(judgeNearValue.errorMessage.currentScrollTopError);
+  }
+
+  if (threshold > MAX_THRESHOLD) {
+    threshold = MAX_THRESHOLD;
   }
 
   result = target.reduce((nearValue, currentValue, currentIndex) => {
