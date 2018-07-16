@@ -1,5 +1,5 @@
-import isArray from "../util/isArray";
-import isNumber from "../util/isNumber";
+import isArray from "../../util/isArray";
+import isNumber from "../../util/isNumber";
 
 const NO_VALUE = -1;
 const HUNDRED = 100;

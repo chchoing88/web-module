@@ -1,4 +1,4 @@
-import FitSection from "./fitSection";
+import FitSection from "./src/fitSection";
 // import { util } from "node-forge";
 // const dom = document.querySelector(".section_guide");
 

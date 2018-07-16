@@ -2,8 +2,8 @@ import getWindowScrollTop from "../getWindowScrollTop";
 import moveScroll from "../moveScroll";
 import judgeNearValue from "../judgeNearValue";
 import calculatePositionTop from "../calculatePositionTop";
-import debounce from "../util/debounce";
-import assign from "../util/assign";
+import debounce from "../../util/debounce";
+import assign from "../../util/assign";
 import EventManager from "./EventManager";
 
 const defaultOptions = {

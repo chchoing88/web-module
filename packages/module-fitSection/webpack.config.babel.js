@@ -1,8 +1,7 @@
-var path = require("path");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
-var webpack = require("webpack");
+import * as path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
-module.exports = {
+let config = {
   entry: {
     app: "./index.js"
   },
@@ -19,29 +18,17 @@ module.exports = {
       }
     ]
   },
-  devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
-    host: "0.0.0.0",
-    disableHostCheck: true,
-    port: 9000,
-    hot: true
-  },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       title: "scrolling",
       template: "index.html",
       inject: "head"
     })
   ],
-  stats: {
-    colors: true
-  },
-  devtool: "source-map",
-  mode: "development",
   resolve: {
     modules: ["node_modules"],
     extensions: [".js", ".json", ".jsx", ".css"]
   }
 };
+
+export default config;
