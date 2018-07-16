@@ -1,4 +1,4 @@
-# dk-module
+# front-module
 
 - dkt 의 공통모듈을 관리하는 프로젝트 ( 현재는 알파 버젼의 환경설정이다. )
 - monorepo 구성을 통해 dk 에서 사용하는 모듈들을 한 레포에서 관리하자. 자세한 monorepo 에 관한건 아래 참조.
