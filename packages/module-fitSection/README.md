@@ -2,6 +2,10 @@
 
 - 스크롤 한후 몇초 뒤에 사용자가 설정한 section 의 가장 가까운쪽 section 을 화면에 fit 하게 스크롤을 자동으로 시켜준다.
 
+## DEMO
+
+[http://heimdall.ftdev.daum.net/assets/front-module/](http://heimdall.ftdev.daum.net/assets/front-module/)
+
 ## 폴더 구조
 
 ```
