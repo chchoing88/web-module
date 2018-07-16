@@ -1,7 +1,6 @@
 import common from "./webpack.config.babel";
 import * as path from "path";
 import merge from "webpack-merge";
-
 import webpack from "webpack";
 
 let config = merge(common, {

@@ -10,7 +10,5 @@
     "start:dev": "webpack-dev-server --config ./webpack.config.dev.babel.js",
     "build": "webpack -p --config ./webpack.config.prod.babel.js"
   },
-  "devDependencies": {
-    "uglifyjs-webpack-plugin": "^1.2.7"
-  }
+  "devDependencies": {}
 }
